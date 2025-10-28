@@ -66,7 +66,7 @@ export default function Hero() {
         </>
 
         {/* Feedback Section */}
-        <div className="md:w-md md:relative mx-auto md:md:mx-4 left-8 top-64 rounded-[45px] border border-white/20 py-8 px-6 bg-white/5 backdrop-blur-[8.5px]">
+        <div className="md:w-md md:relative md:mx-auto mx-2 md:md:mx-4 right-[550px] top-64 rounded-[45px] border border-white/20 py-8 px-6 bg-white/5 backdrop-blur-[8.5px]">
           <div className='flex gap-4 py-2'>
             <img src={dp} alt="user-image" className='rounded-full h-16 w-16 object-cover' />
             <span className='p-1'>
@@ -78,7 +78,7 @@ export default function Hero() {
         </div>
 
         <div className="md:relative top-96">
-          <Heading text={`Our Trendy plants`} />
+          <Heading text={`Our Trendy plants`} className={`pt-4`} />
 
           <Box heading={`For Your Desks Decorations`} price={599} img={plant2} subHeading={`I recently added a beautiful desk decoration plant to my workspace, and it has made such a positive difference!`} direction="flex-row" />
 
@@ -91,7 +91,7 @@ export default function Hero() {
 }
 
 
-const Box = ({ direction = "flex-row-reverse", price, heading, img, subHeading }) => <div className='pt-16 mt-16'>
+const Box = ({ direction = "flex-row-reverse", price, heading, img, subHeading }) => <div className='md:pt-32 mt-4'>
   <div className={`md:flex border bg-white/5 backdrop-blur-[8.5px] w-5/6 mx-auto rounded-[45px] border-white/20 md:justify-center justify-between sm:px-16 md:h-80 pb-4 ${direction}`}>
     <div className="md:w-1/2 md:-top-36 relative flex ">
       <img src={img} alt="plant2" className='md:h-[450px] object-cover h-[200px]' />
@@ -110,8 +110,8 @@ const Box = ({ direction = "flex-row-reverse", price, heading, img, subHeading }
 
 
 
-const ImageBox = ({ img = "", plantName = "Aglaonema  plant", petName = "Indoor Plant", onPrev, onNext, index }) => <div className="md:absolute hidden md:block right-12 top-32">
-  <svg width="500" height="600" viewBox="0 0 512 644" fill="none" xmlns="http://www.w3.org/2000/svg" className='-z-10'>
+const ImageBox = ({ img, plantName, petName, onPrev, onNext, index }) => <div className="md:absolute md:m-0 m-4 md:w-[500px] md:h-[600px] w-[250px] h-[250px] right-12 top-32">
+  <svg width="100%" height="100%" viewBox="0 0 512 644" fill="none" xmlns="http://www.w3.org/2000/svg" className='-z-10'>
     <foreignObject x="-15" y="5.84302" width="542" height="653.157">
       <div xmlns="http://www.w3.org/1999/xhtml" className="bg-white/5 backdrop-blur-[8.5px] w-full h-full" style={{ clipPath: 'url(#bgblur_0_2001_3_clip_path)' }}></div>
     </foreignObject>
@@ -127,17 +127,17 @@ const ImageBox = ({ img = "", plantName = "Aglaonema  plant", petName = "Indoor 
     </defs>
   </svg>
 
-  <img src={img} alt="plant" className='md:absolute -top-18 md:w-[460px] md:h-[460px] w-72 mx-auto' />
 
-  <div className="md:text-lg absolute px-16 bottom-15 w-full">
-    <h2>{petName}</h2>
-    <span className='flex justify-between items-center py-4 '>
+  <div className="md:text-lg md:absolute relative px-16 md:bottom-15 bottom-64 w-full">
+    <img src={img} alt="plant" className='md:w-[460px] md:h-[460px] w-72 mx-auto' />
+    <h2 className="text-xs md:text-base">{petName}</h2>
+    <span className='flex justify-between items-center md:py-4 py-1'>
       {index !== 0 ? <MdKeyboardArrowLeft size={35} onClick={onPrev} className="hover:cursor-pointer" /> : null}
-      <h1 className='md:text-3xl text-lg'>{plantName}</h1>
-      <MdKeyboardArrowRight size={35} onClick={onNext} className="hover:cursor-pointer"/>
+      <h1 className='md:text-3xl text-sm text-nowrap'>{plantName}</h1>
+      <MdKeyboardArrowRight size={35} onClick={onNext} className="hover:cursor-pointer" />
     </span>
 
-    <Button>Buy Now</Button>
+    <Button className={`md:text-base text-sm`}>Buy Now</Button>
 
     <div className="mt-4 flex justify-center">
       <svg width="57" height="6" viewBox="0 0 57 6" fill="none" xmlns="http://www.w3.org/2000/svg">
