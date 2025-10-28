@@ -1,4 +1,4 @@
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import bgImage from '../assets/bg-imagge.jpg';
 import plant1 from '../assets/plant1.png';
 import plant2 from '../assets/plant2.png';
@@ -9,9 +9,26 @@ import CartButton from './CartButton';
 import Header from './Header';
 import Heading from './Heading';
 import StarRating from './StarRating';
+import { useState } from 'react';
+import { heroProductData } from '../data/heroProductData.js'
 
 
 export default function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const handlePrev = () => {
+    setCurrentIndex(prev =>
+      prev === 0 ? heroProductData.length - 1 : prev - 1
+    )
+  }
+
+  const handleNext = () => {
+    setCurrentIndex(prev =>
+      prev === heroProductData.length - 1 ? 0 : prev + 1
+    )
+  }
+
+  const currentProduct = heroProductData[currentIndex]
   return (
     <div style={{
       backgroundImage: `url(${bgImage})`,
@@ -44,7 +61,9 @@ export default function Hero() {
         </div>
 
         {/* Image Section */}
-        <ImageBox />
+        <>
+          <ImageBox img={currentProduct.img} plantName={currentProduct.plantName} petName={currentProduct.petName} onNext={handleNext} index={currentIndex} onPrev={handlePrev} />
+        </>
 
         {/* Feedback Section */}
         <div className="md:w-md md:relative mx-auto md:md:mx-4 left-8 top-64 rounded-[45px] border border-white/20 py-8 px-6 bg-white/5 backdrop-blur-[8.5px]">
@@ -89,7 +108,9 @@ const Box = ({ direction = "flex-row-reverse", price, heading, img, subHeading }
   </div>
 </div>
 
-const ImageBox = ({ img = "", plantName = "", }) => <div className="md:absolute hidden md:block right-12 top-32">
+
+
+const ImageBox = ({ img = "", plantName = "Aglaonema  plant", petName = "Indoor Plant", onPrev, onNext, index }) => <div className="md:absolute hidden md:block right-12 top-32">
   <svg width="500" height="600" viewBox="0 0 512 644" fill="none" xmlns="http://www.w3.org/2000/svg" className='-z-10'>
     <foreignObject x="-15" y="5.84302" width="542" height="653.157">
       <div xmlns="http://www.w3.org/1999/xhtml" className="bg-white/5 backdrop-blur-[8.5px] w-full h-full" style={{ clipPath: 'url(#bgblur_0_2001_3_clip_path)' }}></div>
@@ -106,13 +127,14 @@ const ImageBox = ({ img = "", plantName = "", }) => <div className="md:absolute 
     </defs>
   </svg>
 
-  <img src={plant1} alt="plant" className='md:absolute -top-18 md:w-[460px] md:h-[460px] w-72 mx-auto' />
+  <img src={img} alt="plant" className='md:absolute -top-18 md:w-[460px] md:h-[460px] w-72 mx-auto' />
 
-  <div className="text-lg absolute px-16 bottom-15 w-full">
-    <h2>Indoor Plant</h2>
-    <span className='flex justify-between items-center py-2 '>
-      <h1 className='text-3xl'>Aglaonema  plant</h1>
-      <MdKeyboardArrowRight size={35} />
+  <div className="md:text-lg absolute px-16 bottom-15 w-full">
+    <h2>{petName}</h2>
+    <span className='flex justify-between items-center py-4 '>
+      {index !== 0 ? <MdKeyboardArrowLeft size={35} onClick={onPrev} className="hover:cursor-pointer" /> : null}
+      <h1 className='md:text-3xl text-lg'>{plantName}</h1>
+      <MdKeyboardArrowRight size={35} onClick={onNext} className="hover:cursor-pointer"/>
     </span>
 
     <Button>Buy Now</Button>

@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import Heading from './Heading'
-import rectangle9 from '../assets/Rectangle9.png'
-import { productData } from '../data/productData.js'
+import { useState } from 'react';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { productData } from '../data/productData.js';
+import Heading from './Heading';
 
 export default function BestRecommended() {
   const [currentIndex, setCurrentIndex] = useState(0)
