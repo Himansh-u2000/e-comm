@@ -10,7 +10,7 @@ export default function Header() {
     { name: "Home", route: "/" },
     { name: "Plant Type", route: "/plant-types" },
     { name: "More", route: "/more" },
-    { name: "Contact", route: "/contact" },
+    { name: "Contact", route: "/contact" }
   ]
   const amount = 0;
   return (

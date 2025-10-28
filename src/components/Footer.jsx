@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
 
         <>
-          FloraVision © all right reserve
+          {"FloraVision © all right reserve"}
         </>
       </div>
 

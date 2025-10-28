@@ -1,12 +1,131 @@
-# React + Vite
+# E-Commerce Plant Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce website for buying natural plants and desk decorations. This project showcases a clean UI with smooth animations and interactive components.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Hero Section**: Eye-catching landing page with background imagery and call-to-action buttons
+- **Product Carousel**: Browse through different plant varieties with navigation controls
+- **Customer Reviews**: Display user testimonials with star ratings
+- **Product Listings**: Showcase trending plants with detailed descriptions
+- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
+- **Glassmorphism UI**: Modern glass-effect design elements with backdrop blur
+- **Interactive Components**: Smooth transitions and hover effects
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** - Frontend framework
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Icons** - Icon library for UI elements
+- **Vite** - Build tool and development server
+
+## Project Structure
+
+```
+e-comm/
+├── src/
+│   ├── assets/          # Images and static files
+│   ├── components/      # React components
+│   │   ├── Hero.jsx
+│   │   ├── Button.jsx
+│   │   ├── CartButton.jsx
+│   │   ├── Header.jsx
+│   │   ├── Heading.jsx
+│   │   └── StarRating.jsx
+│   ├── data/           # Product data
+│   └── App.jsx         # Main application component
+├── public/             # Public assets
+└── package.json        # Dependencies
+```
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd e-comm
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+The build files will be generated in the `dist` directory.
+
+## Components
+
+### Hero Component
+
+Main landing section featuring:
+
+- Promotional content
+- Product carousel with navigation
+- Customer review section
+- Trending plant displays
+
+### Button Component
+
+Reusable button with custom styling
+
+### CartButton Component
+
+Shopping cart button for product actions
+
+### StarRating Component
+
+Display star ratings for customer reviews
+
+### Heading Component
+
+Consistent heading styles across the application
+
+## Styling
+
+The project uses Tailwind CSS for styling with custom configurations:
+
+- Glass morphism effects using `backdrop-blur`
+- Custom color schemes with opacity
+- Responsive breakpoints for mobile, tablet, and desktop
+- Custom fonts (Indie Flower)
+
+## Screenshots
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+
+## Future Enhancements
+
+- Shopping cart functionality
+- Product detail pages
+- User authentication
+- Payment integration
+- Product filtering and search
+- Backend API integration
+
+## Author
+
+Himanshu Haldar, 4th Year CSE Student
+
+## License
+
+This project is created for internship assessment purposes.

@@ -14,7 +14,7 @@ export default function Home() {
       <Recommended />
       <Review />
       <BestRecommended />
-      <Footer/>
+      <Footer />
     </div>
   )
 }
