@@ -19,7 +19,7 @@ export default function ReviewCard({ img, name, rating, review }) {
           <StarRating rating={rating}/>
         </div>
       </div>
-        <p className="font-thin py-6">{review}</p>
+        <p className="font-thin py-6 md:text-base text-sm">{review}</p>
     </div>
   )
 }

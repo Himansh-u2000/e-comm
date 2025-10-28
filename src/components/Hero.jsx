@@ -94,7 +94,7 @@ export default function Hero() {
           <p className="md:text-base text-sm">I can't express how thrilled I am with my new natural plants! They bring such a fresh and vibrant energy to my home.</p>
         </div>
 
-        <div className="relative top-96">
+        <div className="md:relative top-96">
           <Heading text={`Our Trendy plants`} />
 
           <Box heading={`For Your Desks Decorations`} price={599} img={plant2} subHeading={`I recently added a beautiful desk decoration plant to my workspace, and it has made such a positive difference!`} direction="flex-row" />

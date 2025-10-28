@@ -1,3 +1,4 @@
+import BestRecommended from '../components/BestRecommended.jsx'
 import Header from '../components/Header.jsx'
 import Heading from '../components/Heading.jsx'
 import Hero from '../components/Hero.jsx'
@@ -7,10 +8,11 @@ import Review from '../components/Review.jsx'
 export default function Home() {
   return (
     <div className='bg-[#1B2316] font-[Inter] text-white'>
-      <Header/>
+      <Header />
       <Hero />
-      <Recommended/>
-      <Review/>
+      <Recommended />
+      <Review />
+      <BestRecommended />
     </div>
   )
 }

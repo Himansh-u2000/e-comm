@@ -3,7 +3,7 @@ import CartButton from './CartButton'
 
 export default function Card({ img, title, desc, price }) {
   return (
-    <div className={`md:w-[500px] md:h-[500px] h-72 pt-4`}
+    <div className={`md:w-[500px] md:h-[500px] h-72 md:pt-4 md:py-0 my-18`}
       style={{
         backgroundImage: `url(${Rectangle6})`,
         // backgroundSize: 'cover',

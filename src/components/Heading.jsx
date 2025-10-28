@@ -12,7 +12,7 @@ export default function Heading({ text, className }) {
           </linearGradient>
         </defs>
       </svg>
-      <span className="text-white font-bold text-2xl">
+      <span className="text-white font-bold md:text-2xl text-xl text-nowrap">
         {text}
       </span>
       <svg width="36" height="36" viewBox="0 0 64 66" fill="none" xmlns="http://www.w3.org/2000/svg">
