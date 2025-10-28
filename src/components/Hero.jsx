@@ -44,43 +44,7 @@ export default function Hero() {
         </div>
 
         {/* Image Section */}
-        <div className="md:absolute hidden md:block right-12 top-32">
-          <svg width="500" height="600" viewBox="0 0 512 644" fill="none" xmlns="http://www.w3.org/2000/svg" className='-z-10'>
-            <foreignObject x="-15" y="5.84302" width="542" height="653.157">
-              <div xmlns="http://www.w3.org/1999/xhtml" className="bg-white/5 backdrop-blur-[8.5px] w-full h-full" style={{ clipPath: 'url(#bgblur_0_2001_3_clip_path)' }}></div>
-            </foreignObject>
-            <path data-figma-bg-blur-radius="15" d="M0.5 83.0605C0.500043 42.5076 40.3416 13.3325 79.6914 23.3125C133.868 37.053 205.805 51.7767 263.007 51C315.825 50.2828 381.619 36.4687 432.31 23.4746C471.644 13.3916 511.5 42.537 511.5 83.1016V584C511.5 616.861 484.861 643.5 452 643.5H60C27.1391 643.5 0.5 616.861 0.5 584V83.0605Z" fill="white" fillOpacity="0.05" stroke="url(#paint0_linear_2001_3)" />
-            <defs>
-              <clipPath id="bgblur_0_2001_3_clip_path" transform="translate(15 -5.84302)">
-                <path d="M0.5 83.0605C0.500043 42.5076 40.3416 13.3325 79.6914 23.3125C133.868 37.053 205.805 51.7767 263.007 51C315.825 50.2828 381.619 36.4687 432.31 23.4746C471.644 13.3916 511.5 42.537 511.5 83.1016V584C511.5 616.861 484.861 643.5 452 643.5H60C27.1391 643.5 0.5 616.861 0.5 584V83.0605Z" />
-              </clipPath>
-              <linearGradient id="paint0_linear_2001_3" x1="32.5" y1="46" x2="459.5" y2="630" gradientUnits="userSpaceOnUse">
-                <stop stopColor="white" />
-                <stop offset="1" />
-              </linearGradient>
-            </defs>
-          </svg>
-
-          <img src={plant1} alt="plant" className='md:absolute -top-18 md:w-[460px] md:h-[460px] w-72 mx-auto' />
-
-          <div className="text-lg absolute px-16 bottom-15 w-full">
-            <h2>Indoor Plant</h2>
-            <span className='flex justify-between items-center py-2 '>
-              <h1 className='text-3xl'>Aglaonema  plant</h1>
-              <MdKeyboardArrowRight size={35} />
-            </span>
-
-            <Button>Buy Now</Button>
-
-            <div className="mt-4 flex justify-center">
-              <svg width="57" height="6" viewBox="0 0 57 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="21" height="6" rx="3" fill="white" />
-                <circle cx="37" cy="3" r="3" fill="white" />
-                <circle cx="54" cy="3" r="3" fill="white" />
-              </svg>
-            </div>
-          </div>
-        </div>
+        <ImageBox />
 
         {/* Feedback Section */}
         <div className="md:w-md md:relative mx-auto md:md:mx-4 left-8 top-64 rounded-[45px] border border-white/20 py-8 px-6 bg-white/5 backdrop-blur-[8.5px]">
@@ -121,6 +85,44 @@ const Box = ({ direction = "flex-row-reverse", price, heading, img, subHeading }
         <Button>Explore</Button>
         <CartButton />
       </div>
+    </div>
+  </div>
+</div>
+
+const ImageBox = ({ img = "", plantName = "", }) => <div className="md:absolute hidden md:block right-12 top-32">
+  <svg width="500" height="600" viewBox="0 0 512 644" fill="none" xmlns="http://www.w3.org/2000/svg" className='-z-10'>
+    <foreignObject x="-15" y="5.84302" width="542" height="653.157">
+      <div xmlns="http://www.w3.org/1999/xhtml" className="bg-white/5 backdrop-blur-[8.5px] w-full h-full" style={{ clipPath: 'url(#bgblur_0_2001_3_clip_path)' }}></div>
+    </foreignObject>
+    <path data-figma-bg-blur-radius="15" d="M0.5 83.0605C0.500043 42.5076 40.3416 13.3325 79.6914 23.3125C133.868 37.053 205.805 51.7767 263.007 51C315.825 50.2828 381.619 36.4687 432.31 23.4746C471.644 13.3916 511.5 42.537 511.5 83.1016V584C511.5 616.861 484.861 643.5 452 643.5H60C27.1391 643.5 0.5 616.861 0.5 584V83.0605Z" fill="white" fillOpacity="0.05" stroke="url(#paint0_linear_2001_3)" />
+    <defs>
+      <clipPath id="bgblur_0_2001_3_clip_path" transform="translate(15 -5.84302)">
+        <path d="M0.5 83.0605C0.500043 42.5076 40.3416 13.3325 79.6914 23.3125C133.868 37.053 205.805 51.7767 263.007 51C315.825 50.2828 381.619 36.4687 432.31 23.4746C471.644 13.3916 511.5 42.537 511.5 83.1016V584C511.5 616.861 484.861 643.5 452 643.5H60C27.1391 643.5 0.5 616.861 0.5 584V83.0605Z" />
+      </clipPath>
+      <linearGradient id="paint0_linear_2001_3" x1="32.5" y1="46" x2="459.5" y2="630" gradientUnits="userSpaceOnUse">
+        <stop stopColor="white" />
+        <stop offset="1" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <img src={plant1} alt="plant" className='md:absolute -top-18 md:w-[460px] md:h-[460px] w-72 mx-auto' />
+
+  <div className="text-lg absolute px-16 bottom-15 w-full">
+    <h2>Indoor Plant</h2>
+    <span className='flex justify-between items-center py-2 '>
+      <h1 className='text-3xl'>Aglaonema  plant</h1>
+      <MdKeyboardArrowRight size={35} />
+    </span>
+
+    <Button>Buy Now</Button>
+
+    <div className="mt-4 flex justify-center">
+      <svg width="57" height="6" viewBox="0 0 57 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="21" height="6" rx="3" fill="white" />
+        <circle cx="37" cy="3" r="3" fill="white" />
+        <circle cx="54" cy="3" r="3" fill="white" />
+      </svg>
     </div>
   </div>
 </div>
